@@ -21,155 +21,160 @@
 
   <body>
     <div class="container">
-      <h1>
-        <div class="city" id="city">City</div>
-      </h1>
-      <h2>
-        <div class="current-day-time" id="current-day-time">Thursday 13:33</div>
-        <div class="current-weather" id="description">Sunny</div>
-      </h2>
-      <div class="row">
-        <div class="col-4">
-          <ul>
-            <li>
-              <img
-                src="https://tse4.mm.bing.net/th?id=OIP.xnirqP9RlyCKSDUXwz97oQHaHa&pid=Api&P=0"
-                alt="wind emoji"
-                width="65px"
-                class="wind"
+      <div class="weather-app-wrapper">
+        <h1>
+          <div class="city" id="city">City</div>
+        </h1>
+        <h2>
+          <div class="current-day-time" id="current-day-time">
+            Thursday 13:33
+          </div>
+          <div class="current-weather" id="description">Sunny</div>
+        </h2>
+        <div class="row">
+          <div class="col-4">
+            <ul>
+              <li>
+                <img
+                  src="https://tse4.mm.bing.net/th?id=OIP.xnirqP9RlyCKSDUXwz97oQHaHa&pid=Api&P=0"
+                  alt="wind emoji"
+                  width="65px"
+                  class="wind"
+                />
+                <span class="wind-speed" id="wind-speed"></span>km/h
+              </li>
+              <br />
+              <li>
+                <img
+                  src="https://tse4.mm.bing.net/th?id=OIP.J-s24uw52bD7uXZs0sND3gAAAA&pid=Api&P=0"
+                  alt="waterdrop emoji"
+                  width="60px"
+                  class="waterdrop"
+                />
+                <span class="percent-humidity" id="percent-humidity"></span>%
+              </li>
+              <br />
+              <li>
+                <img
+                  src="https://cdn0.iconfinder.com/data/icons/cloud-emojis-v2/900/clouds-emoji-weather-clouds-cute-emoticons-cloudy-cloud-6-512.png"
+                  alt="cloud emoji"
+                  width="65px"
+                  class="cloudemoji"
+                />
+                <span class="clouds" id="clouds"></span>%
+              </li>
+            </ul>
+          </div>
+          <div class="col-5">
+            <span class="temperature" id="temperature">?</span>
+            <span class="units">
+              <a href="#" id="celcius-link" class="active">°C </a>
+              <a href="#" id="fahrenheit-link" class="active">°F</a>
+            </span>
+          </div>
+          <div class="col-2">
+            <form class="search-form" id="search-form">
+              <input
+                type="search"
+                id="city-input"
+                placeholder="Enter a City"
+                class="form-control"
+                autofocus="on"
+                autocomplete="off"
               />
-              <span class="wind-speed" id="wind-speed">8</span>km/h
-            </li>
-            <br />
-            <li>
-              <img
-                src="https://tse4.mm.bing.net/th?id=OIP.J-s24uw52bD7uXZs0sND3gAAAA&pid=Api&P=0"
-                alt="waterdrop emoji"
-                width="60px"
-                class="waterdrop"
+              <br />
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-primary"
               />
-              <span class="percent-humidity" id="percent-humidity">20</span>%
-            </li>
-            <br />
-            <li>
-              <img
-                src="https://cdn0.iconfinder.com/data/icons/cloud-emojis-v2/900/clouds-emoji-weather-clouds-cute-emoticons-cloudy-cloud-6-512.png"
-                alt="cloud emoji"
-                width="65px"
-                class="cloudemoji"
-              />
-              <span class="clouds" id="clouds"></span>%
-            </li>
-          </ul>
-        </div>
-        <div class="col-5">
-          <span class="temperature" id="temperature">?</span>
-          <span class="units">
-            <a href="#" id="celcius-link" class="active">°C </a>
-            <a href="#" id="fahrenheit-link" class="active">°F</a>
-          </span>
-        </div>
-        <div class="col-2">
-          <form class="search-form" id="search-form">
-            <input
-              type="search"
-              id="city-input"
-              placeholder="Enter a City"
-              class="form-control"
-              autofocus="on"
-              autocomplete="off"
+              <br />
+              <br />
+              <buttton class="btn btn-sucess" id="current-location-button"
+                >Current Location</buttton
+              >
+            </form>
+          </div>
+          <div class="col-1">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.bSG3fWZGo9J8I2ktxC7P5AAAAA&pid=Api&P=0"
+              alt="city-scape emoji"
+              width="90px"
+              height="120px"
             />
-            <br />
-            <input
-              type="submit"
-              value="Search"
-              class="form-control btn btn-primary"
-            />
-            <br />
-            <br />
-            <buttton class="btn btn-sucess" id="current-location-button"
-              >Current Location</buttton
-            >
-          </form>
+          </div>
         </div>
-        <div class="col-1">
-          <img
-            src="https://tse4.mm.bing.net/th?id=OIP.bSG3fWZGo9J8I2ktxC7P5AAAAA&pid=Api&P=0"
-            alt="city-scape emoji"
-            width="105px"
-          />
+        <div class="row row-cols-1 row-cols-md-6 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Today</h5>
+                <div class="weather-emoji">🌞</div>
+                <p class="card-text"><strong>32 </strong>/ 25</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <div class="weather-emoji">☀️</div>
+                <p class="card-text"><strong>35 </strong>/ 28</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Saturday</h5>
+                <div class="weather-emoji">🌤️</div>
+                <p class="card-text"><strong>37 </strong>/ 30</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Sunday</h5>
+                <div class="weather-emoji">☁️</div>
+                <p class="card-text"><strong>33 </strong>/ 30</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Monday</h5>
+                <div class="weather-emoji">❄️</div>
+                <p class="card-text"><strong>30 </strong>/ 22</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Tuesday</h5>
+                <div class="weather-emoji">☀️</div>
+                <p class="card-text"><strong>34 </strong>/ 26</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="left">
+          <em>* Weather App for Kids * </em>
+        </div>
+        <div class="right">
+          <a href="https://github.com/kathleen-mayfield" target="_blank">
+            Open-source code </a
+          >by Kathleen Mayfield
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-6 g-4">
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Today</h5>
-              <div class="weather-emoji">🌞</div>
-              <p class="card-text"><strong>32 </strong>/ 25</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Friday</h5>
-              <div class="weather-emoji">☀️</div>
-              <p class="card-text"><strong>35 </strong>/ 28</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Saturday</h5>
-              <div class="weather-emoji">🌤️</div>
-              <p class="card-text"><strong>37 </strong>/ 30</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Sunday</h5>
-              <div class="weather-emoji">☁️</div>
-              <p class="card-text"><strong>33 </strong>/ 30</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Monday</h5>
-              <div class="weather-emoji">❄️</div>
-              <p class="card-text"><strong>30 </strong>/ 22</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Tuesday</h5>
-              <div class="weather-emoji">☀️</div>
-              <p class="card-text"><strong>34 </strong>/ 26</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br />
-      <p>
-        <em>* Weather App for Kids * </em>
-      </p>
-      <span class="footer">
-        <a href="https://github.com/kathleen-mayfield">
-          Coded by Kathleen Mayfield</a
-        >
-      </span>
     </div>
 
     <script src="src/script.js"></script>

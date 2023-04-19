@@ -15,8 +15,6 @@ let h2 = document.querySelector("#current-day-time");
 h2.innerHTML = `${day} ${hours}:${minutes}`;
 
 function showWeather(response) {
-  console.log(response.data);
-
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =
     Math.round(celciusTemperature);
@@ -81,4 +79,4 @@ celciusLink.addEventListener("click", displayCelciusTemperature);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-searchCity("New York");
+searchCity("City");
