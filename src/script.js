@@ -79,4 +79,4 @@ celciusLink.addEventListener("click", displayCelciusTemperature);
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-searchCity("City");
+searchCity("New York");

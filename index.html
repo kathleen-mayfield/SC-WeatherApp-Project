@@ -23,13 +23,11 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <h1>
-          <div class="city" id="city">City</div>
+          <div class="city" id="city"></div>
         </h1>
         <h2>
-          <div class="current-day-time" id="current-day-time">
-            Thursday 13:33
-          </div>
-          <div class="current-weather" id="description">Sunny</div>
+          <div class="current-day-time" id="current-day-time"></div>
+          <div class="description" id="description"></div>
         </h2>
         <div class="row">
           <div class="col-4">
@@ -59,13 +57,19 @@
                   src="https://cdn0.iconfinder.com/data/icons/cloud-emojis-v2/900/clouds-emoji-weather-clouds-cute-emoticons-cloudy-cloud-6-512.png"
                   alt="cloud emoji"
                   width="65px"
-                  class="cloudemoji"
+                  class="cloud"
                 />
                 <span class="clouds" id="clouds"></span>%
               </li>
             </ul>
           </div>
           <div class="col-5">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="Clear"
+              id="icon"
+              class="icon"
+            />
             <span class="temperature" id="temperature">?</span>
             <span class="units">
               <a href="#" id="celcius-link" class="active">°C </a>
@@ -104,8 +108,8 @@
             />
           </div>
         </div>
-        <div class="row row-cols-1 row-cols-md-6 g-4">
-          <div class="col">
+        <div class="row">
+          <div class="col-2">
             <div class="card h-100">
               <div class="card-body">
                 <h5 class="card-title">Today</h5>
